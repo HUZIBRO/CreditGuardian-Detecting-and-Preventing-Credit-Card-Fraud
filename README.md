@@ -1,14 +1,14 @@
-# CreditGuardian-Detecting-and-Preventing-Credit-Card-Fraud
+# Advanced Credit Card Fraud Detection Using Machine Learning
 
-This project provides a comprehensive exploratory data analysis (EDA) of a credit card dataset, focusing on identifying spending patterns, customer behavior, and fraudulent transaction risks. It further applies supervised machine learning techniques to build and evaluate predictive models. The notebook demonstrates expertise in data manipulation, visualization, and model evaluation using Python.  
+This project provides a comprehensive **exploratory data analysis (EDA)** of credit card transactions, focusing on **spending patterns, customer behavior, and fraudulent transaction risks**. Using **supervised machine learning**, predictive models were built and evaluated to detect fraud, demonstrating proficiency in **data manipulation, visualization, and model evaluation** with Python.  
 
 ---
 
 ## 🔍 Project Objective  
-To explore and analyze credit card data with the goal of:  
-- Understanding customer transaction behavior  
-- Identifying key features contributing to fraud/default risk  
-- Building classification models for prediction and risk assessment  
+The goal of **CreditGuardian** is to:  
+- Understand customer transaction behavior  
+- Identify patterns indicative of fraudulent activity  
+- Build predictive models for credit card fraud detection and risk assessment  
 
 ---
 
@@ -16,53 +16,52 @@ To explore and analyze credit card data with the goal of:
 
 ### 🧠 Data Science & Analytics  
 **Data Acquisition & Preprocessing**  
-- Utilized Pandas & NumPy for structured data manipulation  
-- Handled missing values, irrelevant fields, and ensured clean data for modeling  
+- Loaded and structured transaction data using **Pandas & NumPy**  
+- Handled missing values, outliers, and irrelevant features to prepare clean data  
+- Scaled and encoded features for modeling  
 
 **Exploratory Data Analysis (EDA)**  
 - Summarized dataset features with descriptive statistics  
-- Analyzed transaction patterns and customer behavior  
-- Detected imbalances and anomalies in the dataset  
-
-**Statistical & Correlation Analysis**  
-- Measured feature correlations to identify predictive variables  
-- Used feature importance from models to guide insights  
+- Analyzed transaction patterns and customer behaviors  
+- Detected anomalies and imbalances indicative of potential fraud  
 
 ---
 
 ### 📈 Data Visualization (Matplotlib & Seaborn)  
 **Insightful Visuals**  
-- Distribution plots of customer behavior  
-- Heatmaps for feature correlation analysis  
-- Bar charts and trend lines for transaction analysis  
+- Distribution plots, histograms, and boxplots for customer transactions  
+- Bar charts and trend lines to highlight spending behavior and risk patterns  
 
 **Customization for Clarity**  
-- Tailored labels, legends, and color palettes for readability  
-- Comparative insights across customer groups  
+- Tailored labels, legends, and color palettes for better readability  
+- Visual differentiation between normal and suspicious transactions  
 
 ---
 
 ### 🤖 Machine Learning (scikit-learn)  
 **Model Implementation**  
-- Built supervised models including **Decision Tree Classifier** and **Logistic Regression**  
+- Built supervised models:  
+  - **Logistic Regression**  
+  - **Random Forest Classifier**  
 
 **Model Evaluation**  
-- Assessed performance with metrics:  
+- Evaluated using:  
   - Accuracy Score  
   - Confusion Matrix  
-  - Recall Score  
-  - Precision Score  
+  - Precision, Recall, F1-Score  
+  - ROC-AUC Curve  
 
-**Key Outcome**  
-- Balanced evaluation of precision vs. recall to address fraud detection challenges  
+**Final Model Selection**  
+- **Random Forest** chosen as the final model based on **Recall and ROC-AUC**, offering superior detection of fraudulent transactions while maintaining balanced precision  
 
 ---
 
-## 📈 Key Business Relevance  
-The analysis and modeling provide actionable insights for:  
-- Detecting fraudulent or high-risk transactions  
-- Supporting financial institutions in credit risk assessment  
-- Enhancing customer security and reducing financial losses  
+## 📈 Key Business Impact  
+The project delivers actionable insights for financial institutions:  
+- Detect fraudulent or high-risk transactions more effectively  
+- Reduce financial losses and protect customers  
+- Support data-driven credit risk assessment  
+- Improve operational efficiency in fraud monitoring  
 
 ---
 
@@ -74,5 +73,6 @@ The analysis and modeling provide actionable insights for:
 | **NumPy**        | Numerical computation               |  
 | **Matplotlib**   | Static data visualization           |  
 | **Seaborn**      | Statistical data visualization      |  
-| **scikit-learn** | Machine learning models & evaluation |  
+| **scikit-learn** | Machine learning modeling & evaluation |  
 
+---
