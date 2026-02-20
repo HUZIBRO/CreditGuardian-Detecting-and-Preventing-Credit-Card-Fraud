@@ -1,4 +1,4 @@
-# Advanced Credit Card Fraud Detection Using Machine Learning
+# CreditGuardian – Detecting and Preventing Credit Card Fraud
 
 This project provides a comprehensive **exploratory data analysis (EDA)** of credit card transactions, focusing on **spending patterns, customer behavior, and fraudulent transaction risks**. Using **supervised machine learning**, predictive models were built and evaluated to detect fraud, demonstrating proficiency in **data manipulation, visualization, and model evaluation** with Python.  
 
@@ -12,60 +12,67 @@ The goal of **CreditGuardian** is to:
 
 ---
 
-## 📊 Skills Highlighted  
+## 📊 Business Insights: Key Drivers of Fraudulent Transactions
 
-### 🧠 Data Science & Analytics  
-**Data Acquisition & Preprocessing**  
-- Loaded and structured transaction data using **Pandas & NumPy**  
-- Handled missing values, outliers, and irrelevant features to prepare clean data  
-- Scaled and encoded features for modeling  
+Based on exploratory data analysis, the following risk patterns were identified:
 
-**Exploratory Data Analysis (EDA)**  
-- Summarized dataset features with descriptive statistics  
-- Analyzed transaction patterns and customer behaviors  
-- Detected anomalies and imbalances indicative of potential fraud  
+### 1️⃣ Bank-Level Exposure
+Transactions associated with **Barclays Bank** show a relatively higher concentration of fraudulent activity, indicating potential exposure differences across issuing institutions.
 
----
+### 2️⃣ Merchant Category Risk
+The **Children Merchant Group** exhibits a disproportionately higher fraud incidence, suggesting that certain merchant segments may present elevated fraud vulnerability.
 
-### 📈 Data Visualization (Matplotlib & Seaborn)  
-**Insightful Visuals**  
-- Distribution plots, histograms, and boxplots for customer transactions  
-- Bar charts and trend lines to highlight spending behavior and risk patterns  
+### 3️⃣ Transaction Channel Risk
+**Online transactions** demonstrate a significantly higher fraud rate compared to other transaction types, reinforcing the increased risk associated with card-not-present environments.
 
-**Customization for Clarity**  
-- Tailored labels, legends, and color palettes for better readability  
-- Visual differentiation between normal and suspicious transactions  
+### 4️⃣ Entry Mode Risk Indicator
+Transactions processed using **CVC entry mode** are more frequently linked to fraudulent cases, indicating elevated risk in manual authentication scenarios.
+
+### 5️⃣ Card Type Distribution
+Fraud occurrences are more common among **Visa card transactions** within this dataset, which may reflect usage volume or exposure differences.
+
+### 6️⃣ Transaction Amount Pattern
+Fraudulent transactions tend to occur more frequently at **lower transaction amounts**, potentially reflecting fraudsters’ strategy to avoid detection through small-value testing transactions.
 
 ---
 
-### 🤖 Machine Learning (scikit-learn)  
-**Model Implementation**  
-- Built supervised models:  
-  - **Logistic Regression**  
-  - **Random Forest Classifier**  
+## 🤖 Modeling Approach
 
-**Model Evaluation**  
-- Evaluated using:  
-  - Accuracy Score  
-  - Confusion Matrix  
-  - Precision, Recall, F1-Score  
-  - ROC-AUC Curve  
+To predict fraudulent transactions, two supervised machine learning models were implemented:
 
-**Final Model Selection**  
-- **Random Forest** chosen as the final model based on **Recall and ROC-AUC**, offering superior detection of fraudulent transactions while maintaining balanced precision  
+1️⃣ **Logistic Regression**  
+A baseline linear model used to establish a benchmark for classification performance and interpretability.
+
+2️⃣ **Random Forest Classifier**  
+An ensemble tree-based model designed to capture non-linear relationships and complex feature interactions within the data.
 
 ---
 
-## 📈 Key Business Impact  
-The project delivers actionable insights for financial institutions:  
-- Detect fraudulent or high-risk transactions more effectively  
-- Reduce financial losses and protect customers  
-- Support data-driven credit risk assessment  
-- Improve operational efficiency in fraud monitoring  
+## 📊 Evaluation Strategy
+
+Model performance was assessed using multiple classification metrics, including:  
+- **Precision**  
+- **Recall**  
+- **F1-Score**  
+- **ROC-AUC Score**  
+
+Given the nature of fraud detection, **Recall was prioritized**, as failing to detect fraudulent transactions (False Negatives) can result in significant financial loss.  
+
+To ensure model robustness and reduce overfitting risk:  
+- **K-Fold Cross-Validation** was performed using **ROC-AUC** as the scoring metric.
+
+---
+
+## 🏆 Final Model Selection
+
+Based on comparative evaluation using **Recall** and **ROC-AUC** metrics, the **Random Forest Classifier** was selected as the final model.  
+
+It demonstrated superior ability to detect fraudulent transactions while maintaining balanced precision, making it the most suitable model for this credit fraud detection task.
 
 ---
 
 ## 💻 Tech Stack  
+
 | Tool/Library     | Purpose                             |  
 |------------------|-------------------------------------|  
 | **Python**       | Programming language                |  
