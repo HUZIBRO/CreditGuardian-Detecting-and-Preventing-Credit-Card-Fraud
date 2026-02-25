@@ -35,17 +35,17 @@ Fraud occurrences are more common among **Visa card transactions** within this d
 Fraudulent transactions tend to occur more frequently at **lower transaction amounts**, potentially reflecting fraudsters’ strategy to avoid detection through small-value testing transactions.
 
 ---
+## 🤖 Modeling Approach  
 
-## 🤖 Modeling Approach
-
-To predict fraudulent transactions, two supervised machine learning models were implemented:
+To predict fraudulent transactions, two supervised machine learning models were implemented. Since the dataset was **highly imbalanced** (fraud cases representing a small minority), special attention was given to ensure the models properly learned from the minority class.
 
 1️⃣ **Logistic Regression**  
-A baseline linear model used to establish a benchmark for classification performance and interpretability.
+A baseline linear model used to establish a benchmark for classification performance and interpretability.  
+To address class imbalance, the `class_weight='balanced'` parameter was applied, allowing the model to assign higher importance to fraudulent (minority) transactions.
 
 2️⃣ **Random Forest Classifier**  
-An ensemble tree-based model designed to capture non-linear relationships and complex feature interactions within the data.
-
+An ensemble tree-based model designed to capture non-linear relationships and complex feature interactions within the data.  
+Similarly, `class_weight='balanced'` was used to ensure the model focused more effectively on detecting fraudulent cases rather than being biased toward the majority class.
 ---
 
 ## 📊 Evaluation Strategy
