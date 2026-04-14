@@ -46,6 +46,7 @@ To address class imbalance, the `class_weight='balanced'` parameter was applied,
 2️⃣ **Random Forest Classifier**  
 An ensemble tree-based model designed to capture non-linear relationships and complex feature interactions within the data.  
 Similarly, `class_weight='balanced'` was used to ensure the model focused more effectively on detecting fraudulent cases rather than being biased toward the majority class.
+
 ---
 
 ## 📊 Evaluation Strategy
